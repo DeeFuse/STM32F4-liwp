@@ -662,7 +662,7 @@ void ethernetif_update_config(struct netif *netif)
 {
   __IO uint32_t tickstart = 0;
   uint32_t regvalue = 0;
-
+  
   if(netif_is_link_up(netif))
   { 
     /* Restart the auto-negotiation */

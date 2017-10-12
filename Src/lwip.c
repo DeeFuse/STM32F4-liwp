@@ -61,11 +61,11 @@
 /* USER CODE END 0 */
 /* Private function prototypes -----------------------------------------------*/
 /* ETH Variables initialization ----------------------------------------------*/
-//void _Error_Handler(char * file, int line);
+void _Error_Handler(char * file, int line);
 
 /* DHCP Variables initialization ---------------------------------------------*/
-uint32_t DHCPcoarseTimer = 0;
 uint32_t DHCPfineTimer = 0;
+uint32_t DHCPcoarseTimer = 0;
 /* USER CODE BEGIN 1 */
 
 /* USER CODE END 1 */

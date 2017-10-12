@@ -51,12 +51,10 @@
 #include "lwip.h"
 #include "tim.h"
 #include "gpio.h"
-#include "config.h"
-
 
 /* USER CODE BEGIN Includes */
+#include "config.h"
 #include "app_ethernet.h"
-extern struct netif gnetif;
 
 /* USER CODE END Includes */
 
@@ -64,12 +62,12 @@ extern struct netif gnetif;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
+extern struct netif gnetif;
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
@@ -125,6 +123,7 @@ int main(void)
   int btnPress = 0;
 
   /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
