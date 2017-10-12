@@ -28,7 +28,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "lwip/opt.h"
 #include "stm32f4xx_hal.h"
-//#include "lcd_log.h"
 #include "lwip/dhcp.h"
 #include "app_ethernet.h"
 #include "ethernetif.h"
@@ -184,7 +183,6 @@ void DHCP_Process(struct netif *netif)
 			{
 
 				struct dhcp* dhcp = netif_get_client_data(netif, LWIP_NETIF_CLIENT_DATA_INDEX_DHCP);
-				printf("DHCP Tries: %d\n", dhcp->tries);
 
 				if(dhcp->tries > MAX_DHCP_TRIES)
 				{
@@ -231,7 +229,6 @@ void DHCP_Periodic_Handle(struct netif *netif)
 			(DHCP_state != DHCP_LINK_DOWN))
 		{
 			/* process DHCP state machine */
-			printf("DHCP Enabled: %d\n", cfg->dhcpEnabled);
 			DHCP_Process(netif);
 		}
 	}
